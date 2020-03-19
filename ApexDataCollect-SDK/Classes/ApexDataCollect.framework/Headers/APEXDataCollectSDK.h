@@ -65,7 +65,7 @@ static NSString* const PexInnerPidLocalKey = @"PexInnerPidName";
 @property (nonatomic, assign) ApexLocationDataLanguage currentLanguage; /**< 定位信息返回语言 */
 @property (nonatomic, copy, readonly) NSString *serverUrl; /* 服务端url */
 @property (nonatomic, copy,readonly) NSString *trackingID; /**< MD5(serverUrl) */
-@property (nonatomic, copy, readonly) NSString *UUID; /**< 自动生成 存储在keychain中 */
+@property (nonatomic,strong, readonly) NSString *UUID; /**< 自动生成 存储在keychain中 */
 @property (nonatomic, copy, readonly) NSString *apiKey; /**< api key */
 @property (nonatomic, copy) NSString *UID; /**< 用户id */
 @property (nonatomic, copy) NSString *localConfigVersion; /**< 当前本地的配置文件版本 */
@@ -78,14 +78,14 @@ static NSString* const PexInnerPidLocalKey = @"PexInnerPidName";
 @property (nonatomic, strong, readonly) NSMutableDictionary *cachedInfo; /**< 缓存的设备信息 */
 @property (nonatomic, assign, readonly) BOOL strictlyUploadInfomationOfCellsAndItems; /**< 是否仍然上传未配置过的cell以及items(false:上传, true:不上传) */
 @property (nonatomic, assign, readonly) BOOL automaticallyCleanUp; /**<  是否删除超出给定的时间段的数据 */
-@property (nonatomic, copy, readonly) NSString *appLanguage; /**<  */
+@property (nonatomic, strong, readonly) NSString *appLanguage; /**<  */
 @property (nonatomic, assign, readonly) NSTimeInterval CleanUpPeriod;
 
-@property (nonatomic, copy, readonly) NSString *visitId; /**< 会话id 无则不填*/
-@property (nonatomic, copy, readonly) NSString *innerPid; /**< innerpid 无则不填*/
+@property (nonatomic,strong, readonly) NSString *visitId; /**< 会话id 无则不填*/
+@property (nonatomic, strong, readonly) NSString *innerPid; /**< innerpid 无则不填*/
 
-@property (nonatomic, copy, readonly) NSString *configUrl; /**< 配置文件下载url */
-@property (nonatomic, copy, readonly) NSString *VisualizationDomain; /**< 可视化sdk接口域名 */
+@property (nonatomic, strong, readonly) NSString *configUrl; /**< 配置文件下载url */
+@property (nonatomic, strong, readonly) NSString *VisualizationDomain; /**< 可视化sdk接口域名 */
 
 /**
  可视化跳转回调中调用,通知SDK进行验证与开启可视化功能

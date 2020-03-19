@@ -10,5 +10,5 @@
 
 @interface UITableViewCell (PEX)
 @property (nonatomic, strong) NSIndexPath *pex_indexPath;
-@property (nonatomic, copy) NSString *trackDataId; /**< 点击cell时将会携带上传的数据*/
+@property (nonatomic, strong) NSString *trackDataId; /**< 点击cell时将会携带上传的数据*/
 @end
