@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ApexDataCollectN-SDK'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'A short description of ApexDataCollectN-SDK.'
 
 # This description is used to generate tags and improve search results.
@@ -29,6 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7 armv7s x86_64' }
 
   # s.source_files = 'ApexDataCollect-SDK/Classes/**/*'
   s.vendored_frameworks = 'ApexDataCollect-SDK/Classes/ApexDataCollect.framework'
